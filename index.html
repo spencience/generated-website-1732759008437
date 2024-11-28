@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixel Art Gallery</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+        .pixel-border {
+            image-rendering: pixelated;
+            border-style: solid;
+            border-width: 4px;
+            border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkZCg86RyxexQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAFklEQVQI12P8//8/AwwwMSACwvQQBQBxYAQBoqnbNQAAAABJRU5ErkJggg==") 2;
+        }
+        
+        .pixel-art {
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+<header class="container mx-auto px-4 py-8">
+<nav class="flex justify-between items-center">
+<h1 class="text-4xl font-bold pixel-border p-4">Pixel Art Gallery</h1>
+<div class="space-x-4">
+<a href="/gallery" class="hover:text-blue-400">Gallery</a>
+<a href="/create" class="hover:text-blue-400">Create</a>
+<a href="/community" class="hover:text-blue-400">Community</a>
+</div>
+</nav>
+</header>
+<main class="container mx-auto px-4 py-8">
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<article class="pixel-border p-4 bg-gray-800 float">
+<div class="pixel-art bg-blue-500 w-32 h-32 mx-auto mb-4"></div>
+<h2 class="text-xl font-bold mb-2">Pixel Character</h2>
+<p class="text-gray-300">A charming 32x32 character sprite</p>
+</article>
+<article class="pixel-border p-4 bg-gray-800 float">
+<div class="pixel-art bg-green-500 w-32 h-32 mx-auto mb-4"></div>
+<h2 class="text-xl font-bold mb-2">Landscape Scene</h2>
+<p class="text-gray-300">Beautiful pixel art landscape</p>
+</article>
+<article class="pixel-border p-4 bg-gray-800 float">
+<div class="pixel-art bg-red-500 w-32 h-32 mx-auto mb-4"></div>
+<h2 class="text-xl font-bold mb-2">Item Collection</h2>
+<p class="text-gray-300">Game items and power-ups</p>
+</article>
+</section>
+<section class="mt-16">
+<h2 class="text-3xl font-bold mb-8 pixel-border p-4 inline-block">Create Your Pixel Art</h2>
+<form method="GET" action="/create" class="pixel-border p-8 bg-gray-800">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<label class="block mb-2">Canvas Size</label>
+<select name="size" class="w-full bg-gray-700 p-2 rounded">
+<option value="16">16x16</option>
+<option value="32">32x32</option>
+<option value="64">64x64</option>
+</select>
+</div>
+<div>
+<label class="block mb-2">Color Palette</label>
+<select name="palette" class="w-full bg-gray-700 p-2 rounded">
+<option value="default">Default</option>
+<option value="gameboy">GameBoy</option>
+<option value="neon">Neon</option>
+</select>
+</div>
+</div>
+<button type="submit" class="mt-8 bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded">Start Creating</button>
+</form>
+</section>
+</main>
+<footer class="container mx-auto px-4 py-8 mt-16 border-t border-gray-800">
+<div class="flex justify-between items-center">
+<p>&copy; 2024 Pixel Art Gallery</p>
+<div class="space-x-4">
+<a href="/terms" class="hover:text-blue-400">Terms</a>
+<a href="/privacy" class="hover:text-blue-400">Privacy</a>
+<a href="/contact" class="hover:text-blue-400">Contact</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
+<!DOCTYPE html> and ends with proper closing tags for all elements including </body> and </html>
